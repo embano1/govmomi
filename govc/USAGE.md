@@ -4827,7 +4827,8 @@ Options:
 Usage: govc version [OPTIONS]
 
 Options:
-  -require=  Require govc version >= this value
+  -require=     Require govc version >= this value
+  -short=false  Print only short govc version instead of full build information
 ```
 
 ## vm.change

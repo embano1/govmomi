@@ -236,7 +236,7 @@ if [ -n "$test" ] ; then
   govc guest.run -d "$data" jq .
 
   # test ProcessIO download retries
-  govc version | govc guest.run -d - bash -c "'sleep 2 && cat'"
+  govc version -short | govc guest.run -d - bash -c "'sleep 2 && cat'"
 
   echo "Waiting for tests to complete..."
   wait

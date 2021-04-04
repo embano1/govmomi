@@ -73,7 +73,7 @@ EOF
     govc guest.ls "$d/motd"
     govc guest.download $d/motd - | grep Chop
   done
-  govc version | govc guest.upload -f - /etc/motd
+  govc version -short | govc guest.upload -f - /etc/motd
   govc guest.download /etc/motd - | grep -v Chop
 
   pid=$(govc guest.start /bin/sync)

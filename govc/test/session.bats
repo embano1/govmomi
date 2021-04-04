@@ -12,7 +12,7 @@ load test_helper
   assert_success
 
   # Test User-Agent
-  govc session.ls | grep "$(govc version | tr ' ' /)"
+  govc session.ls | grep "$(govc version -short | tr ' ' /)"
 
   run govc session.ls -S
   assert_success

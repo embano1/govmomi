@@ -85,7 +85,7 @@ load test_helper
   run govc version
   assert_success
 
-  v=$(govc version | awk '{print $NF}')
+  v=$(govc version -short | awk '{print $NF}')
   run govc version -require "$v"
   assert_success
 
